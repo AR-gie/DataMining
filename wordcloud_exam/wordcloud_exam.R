@@ -34,6 +34,11 @@ df <- data.frame(
 top10 <- head(df, 10)
 print(top10)
 
+cat("The most frequent words—staff, office, and restaurant—suggest that many comments focus on service personnel and the physical environment.\n",
+    "Words like clean, food, and process indicate that cleanliness, food quality, and procedures are common topics.\n",
+    "The presence of long and wait suggests that waiting time may be a recurring concern.\n",
+    "Overall, the dataset seems centered on customer experience, emphasizing service quality, cleanliness, and operational efficiency.\n")
+
 #
 
 png("wordcloud_exam.png", width = 800, height = 600)
@@ -63,5 +68,6 @@ wordcloud(
   random.order = FALSE,
   colors = brewer.pal(8, "Dark2")
 )
+
 
 dev.off()
